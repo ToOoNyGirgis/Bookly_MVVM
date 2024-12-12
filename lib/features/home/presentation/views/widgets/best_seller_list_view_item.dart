@@ -18,7 +18,7 @@ class BestSellersItem extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.18,
       child: GestureDetector(
         onTap: () {
-          context.push(AppRouter.kBookDetailsScreen);
+          context.push(AppRouter.kBookDetailsScreen , extra: books);
 
         },
         child: Card(

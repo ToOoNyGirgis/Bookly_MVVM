@@ -20,7 +20,7 @@ final double? height;
           itemCount: state.books.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return HorizontalListViewItem(imageUrl: state.books[index].volumeInfo.imageLinks!.thumbnail,);
+            return HorizontalListViewItem(books: state.books[index],);
           },
         ),
       );
