@@ -29,7 +29,7 @@ class BookDetailsSection extends StatelessWidget {
           style: FontsStyles.price20
               .copyWith(color: Colors.grey, fontWeight: FontWeight.w500),
         ),
-        const Rating(),
+         Rating(count: 0,rating: 0,),
         const CustomActionButton(),
       ],
     );

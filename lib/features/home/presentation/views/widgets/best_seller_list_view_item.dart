@@ -59,15 +59,15 @@ class BestSellersItem extends StatelessWidget {
                       const Spacer(),
                        Row(
                         children: [
-                          Text(
+                          const Text(
                             'Free',
                             style: FontsStyles.price20,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
                             textAlign: TextAlign.start,
                           ),
-                          Spacer(),
-                          Rating(),
+                          const Spacer(),
+                          Rating(rating:books.volumeInfo.averageRating??0 ,count:books.volumeInfo.ratingsCount??0 ,),
                         ],
                       ),
                     ],
