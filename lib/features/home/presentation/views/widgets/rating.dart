@@ -6,7 +6,7 @@ class Rating extends StatelessWidget {
     super.key, required this.rating, required this.count,
   });
 
-  final int rating;
+  final String rating;
   final int count;
   @override
   Widget build(BuildContext context) {

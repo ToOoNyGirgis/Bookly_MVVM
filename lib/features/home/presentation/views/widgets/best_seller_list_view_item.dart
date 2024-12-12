@@ -67,7 +67,7 @@ class BestSellersItem extends StatelessWidget {
                             textAlign: TextAlign.start,
                           ),
                           const Spacer(),
-                          Rating(rating:books.volumeInfo.averageRating??0 ,count:books.volumeInfo.ratingsCount??0 ,),
+                          Rating(rating:books.volumeInfo.averageRating?.toStringAsFixed(1) ?? '0.0' ,count:books.volumeInfo.ratingsCount??0 ,),
                         ],
                       ),
                     ],
