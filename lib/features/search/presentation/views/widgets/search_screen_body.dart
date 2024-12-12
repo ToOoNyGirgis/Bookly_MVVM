@@ -23,7 +23,7 @@ class SearchScreenBody extends StatelessWidget {
             child: Text(
               'Result',
               textAlign: TextAlign.start,
-              style: FontsStyles.title24,
+              style: FontsStyles.title20,
             ),
           ),
           Expanded(child: SearchListView()),

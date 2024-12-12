@@ -1,4 +1,3 @@
-import 'package:bookly_mvvm/core/utils/app_assets.dart';
 import 'package:bookly_mvvm/core/utils/constatns.dart';
 import 'package:bookly_mvvm/core/utils/font_styles.dart';
 import 'package:bookly_mvvm/features/home/presentation/views/widgets/best_seller_list_view.dart';
@@ -28,7 +27,7 @@ class HomeScreenBody extends StatelessWidget {
                   child: Text(
                     'Best Seller',
                     textAlign: TextAlign.start,
-                    style: FontsStyles.title24,
+                    style: FontsStyles.title20,
                   ),
                 ),
               ],
@@ -37,7 +36,7 @@ class HomeScreenBody extends StatelessWidget {
           SliverToBoxAdapter(
             child:  Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: BestSellersListView(),
+              child: NewestBooksListView(),
             ),
           )
         ],

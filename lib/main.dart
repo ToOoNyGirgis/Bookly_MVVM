@@ -20,8 +20,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>()),),
-        BlocProvider(create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>()),),
+        BlocProvider(
+          create: (context) => FeaturedBooksCubit(
+            getIt.get<HomeRepoImpl>(),
+          )..fetchFeaturedBooks(),
+        ),
+        BlocProvider(
+          create: (context) => NewestBooksCubit(
+            getIt.get<HomeRepoImpl>(),
+          )..fetchNewestBooks(),
+        ),
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
@@ -31,11 +39,10 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ).copyWith(
           scaffoldBackgroundColor: AppColors.scaffoldBackground,
-          textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
         ),
       ),
     );
   }
 }
-
-
