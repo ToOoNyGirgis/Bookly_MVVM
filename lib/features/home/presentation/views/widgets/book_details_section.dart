@@ -1,5 +1,6 @@
 import 'package:bookly_mvvm/core/utils/app_fonts.dart';
 import 'package:bookly_mvvm/core/utils/font_styles.dart';
+import 'package:bookly_mvvm/core/utils/functions/launch_url.dart';
 import 'package:bookly_mvvm/core/widgets/custom_action_button.dart';
 import 'package:bookly_mvvm/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_mvvm/features/home/presentation/views/widgets/book_details_image.dart';
@@ -33,8 +34,13 @@ class BookDetailsSection extends StatelessWidget {
               .copyWith(color: Colors.grey, fontWeight: FontWeight.w500),
         ),
         Rating(rating:books.volumeInfo.averageRating?.toStringAsFixed(1) ?? '0.0' ,count:books.volumeInfo.ratingsCount??0 ,),
-        const CustomActionButton(),
+         CustomActionButton(
+           onPressed: () {
+             launchURL(context, link: books.volumeInfo.previewLink!);
+           }
+         ),
       ],
     );
   }
+
 }

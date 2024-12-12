@@ -9,7 +9,7 @@ class SearchListView extends StatelessWidget {
       shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: 10,
-      itemBuilder: (context, index) =>  Text('data'),
+      itemBuilder: (context, index) =>  const Text('data'),
     );
   }
 }

@@ -4,22 +4,24 @@ import 'package:flutter/material.dart';
 
 class CustomActionButton extends StatelessWidget {
   const CustomActionButton({
-    super.key,
+    super.key, this.onPressed,
   });
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding16),
+    return  Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppConstants.defaultPadding16),
       child: Row(
         children: [
-          Expanded(child: CustomPriceButton(
+           const Expanded(child: CustomPriceButton(
             rightBorder: 0,
             leftBorder: 14,
             buttonColor: Colors.white,
             text: '19.9 €',
           )),
           Expanded(child: CustomPriceButton(
+            onPressed: onPressed,
             leftBorder: 0,
             rightBorder: 14,
             text: 'Free preview',

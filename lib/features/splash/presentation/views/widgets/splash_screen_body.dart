@@ -1,7 +1,6 @@
 import 'package:bookly_mvvm/core/utils/app_assets.dart';
 import 'package:bookly_mvvm/core/utils/app_router.dart';
 import 'package:bookly_mvvm/core/utils/constatns.dart';
-import 'package:bookly_mvvm/features/home/presentation/views/home_screen.dart';
 import 'package:bookly_mvvm/features/splash/presentation/views/widgets/animated_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

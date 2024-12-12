@@ -50,7 +50,7 @@ class BestSellersItem extends StatelessWidget {
                         textAlign: TextAlign.start,
                       ),
                        Text(
-                        books.volumeInfo.authors![0],
+                        books.volumeInfo.authors?[0] ??'',
                         style: FontsStyles.authors16,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
